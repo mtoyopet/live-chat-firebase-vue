@@ -1,4 +1,5 @@
 <template>
+  <h2>Login</h2>
   <form @submit.prevent="handleSubmit">
     <input type="email" required placeholder="email" v-model="email">
     <input type="password" required placeholder="password" v-model="password">
