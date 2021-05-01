@@ -7,3 +7,7 @@
 2. Install new cli `npm install -g @vue/cli`
 3. Create New Project: `vue create live-chat-firebase`
 4. Change directory: `cd live-chat-firebase`    
+5. add a Welcome page & css
+6. add firebase
+   create a firebase directory
+7. Add signup and login page with setup method
