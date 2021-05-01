@@ -1,19 +1,9 @@
-# live-chat-firebase
+# live-chat-firebase-vue
 
-## Project setup
-```
-npm install
-```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# Upgrade Vue@CLI
+1. Uninstall old cli `npm uninstall vue-cli -g` 
+   -[Reference](https://cli.vuejs.org/guide/installation.html)
+2. Install new cli `npm install -g @vue/cli`
+3. Create New Project: `vue create live-chat-firebase`
+4. Change directory: `cd live-chat-firebase`    
