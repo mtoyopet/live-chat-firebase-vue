@@ -1,25 +1,25 @@
 <template>
   <div class="container">
-    <navbar @logout="ExitChat" />  
+    <navbar />  
   </div>
   <div>Chatroom</div>
 </template>
 
 <script>
-import { useRouter } from 'vue-router'
+// import { useRouter } from 'vue-router'
 import Navbar from '../components/Navbar.vue'
 
 export default {
   components: { Navbar },
-  setup() {
-    const router = useRouter()
+  // setup() {
+    // const router = useRouter()
 
-    const exitChat = () => {
-      router.push({ name: 'Welcome' })
-    }
+    // const exitChat = () => {
+    //   router.push({ name: 'Welcome' })
+    // }
 
-    return { exitChat }
-  }
+    // return { exitChat }
+  // }
 }
 </script>
 
