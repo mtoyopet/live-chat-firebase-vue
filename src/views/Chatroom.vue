@@ -2,7 +2,6 @@
   <div class="container">
     <navbar />  
   </div>
-  <div>Chatroom</div>
 </template>
 
 <script>
