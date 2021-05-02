@@ -19,7 +19,6 @@ const signup = async (email, password, displayName) => {
     return res
   } catch (err) {
     error.value = 'invalid login credentials'
-    console.log(error.value)
   }
 }
 

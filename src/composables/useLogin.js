@@ -12,7 +12,6 @@ const login = async (email, password) => {
       throw new Error ('Could not complete the login')
     }
     error.value = null
-    console.log(res)
     return res
   } catch (err) {
     error.value = err.message
