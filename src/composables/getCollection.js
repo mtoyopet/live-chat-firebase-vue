@@ -8,17 +8,18 @@ const getCollection = (collection) => {
   let collectionRef = projectFirestore.collection(collection)
     .orderBy('createdAt')
 
-  collectionRef.onSnapshot(() => {
+  collectionRef.onSnapshot(snap => {
     let results = []
-    snap.docs.ForEach(() => {
+    snap.docs.forEach((doc) => {
       // Right is executed only when left is true
-      doc.data().createdAt && result.push({ ...doc.data(), id: doc.id })
+      doc.data().createdAt && results.push({ ...doc.data(), id: doc.id })
     })
     documents.value = results
     error.value = null
   }, (err) => {
     console.log(err.message)
-    documents.value = nullerror.value = 'could not fetch data'
+    documents.value = null
+    error.value = 'could not fetch data'
   })
 
   return { documents, error }
