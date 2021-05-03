@@ -1,24 +1,30 @@
 <template>
   <div class="container">
-    <navbar />  
+    <navbar />
+    <new-chat-form />
   </div>
 </template>
 
 <script>
-// import { useRouter } from 'vue-router'
+import { watch } from 'vue'
+import { useRouter } from 'vue-router'
 import Navbar from '../components/Navbar.vue'
+import getUser from '../composables/getUser'
+import NewChatForm from '../components/NewChatForm'
 
 export default {
-  components: { Navbar },
-  // setup() {
-    // const router = useRouter()
+  components: { Navbar, NewChatForm },
+  setup() {
+    const router = useRouter()
+    const { user } = getUser()
 
-    // const exitChat = () => {
-    //   router.push({ name: 'Welcome' })
-    // }
-
-    // return { exitChat }
-  // }
+    // if the user value is ever null, redirect to welcome screen
+    watch(user, () => {
+      if (!user.value) {
+        router.push({ name: 'Welcome' })
+      }
+    })
+  }
 }
 </script>
 
